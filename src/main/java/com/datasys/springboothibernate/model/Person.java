@@ -9,12 +9,7 @@ import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import lombok.Getter;
-import lombok.Setter;
-
 @Entity
-@Getter
-@Setter
 public class Person {
 
 	@Id
@@ -25,6 +20,20 @@ public class Person {
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern="dd/mm/yyyy")
 	private Date dob;
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 	
 }
