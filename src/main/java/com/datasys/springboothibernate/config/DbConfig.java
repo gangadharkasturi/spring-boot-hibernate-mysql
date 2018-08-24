@@ -54,7 +54,7 @@ public class DbConfig {
 	public Properties hibernateProperties() {
 		Properties properties = new Properties();
 		properties.putIfAbsent("hibernate.dialect", dialect);
-		properties.putIfAbsent("hibernate.hbm2ddl.auto", "create");
+		//properties.putIfAbsent("hibernate.hbm2ddl.auto", "create");
 		properties.putIfAbsent("hibernate.show_sql", "true");
 		properties.putIfAbsent("hibernate.format_sql", "true");
 
