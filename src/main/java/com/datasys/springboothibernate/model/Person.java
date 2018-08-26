@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 public class Person {
@@ -16,24 +17,10 @@ public class Person {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
+	@JsonProperty("name")
 	private String name;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern="dd/mm/yyyy")
 	private Date dob;
 
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	
 }

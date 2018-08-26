@@ -24,12 +24,10 @@ public class PersonController {
 	@PostMapping(value="/savePerson")
 	public String savePerson(@RequestBody Person person)
 	{
-		if(null != person.getName()) {
 		dao.saveUser(person);
-		logger.info("Saved Person Name: " +person.getName());
-		}
 		return "success!!";
 	}
+	
 	@GetMapping("/getAll")
 	public List<Person> getALlPersons() {
 		return dao.getPersons();
